@@ -1,0 +1,50 @@
+/**********************************/
+/*********** VARIABLES ************/
+/**********************************/
+
+$main-bg: #F5F5F5;
+$menu-bg: #FAFAFA;
+$menu-color: #757575;
+$menu-border: #BDBDBD;
+$tabs-color: #263238;
+$link-hover-1: #d62976;
+$link-hover-2: #962fbf;
+$profile-bg: #d62976;
+$profile-grad: (220deg, #962fbf 0%, #d62976 25%, #fa7e1e 75%, #feda75 100%);
+/**********************************/
+/************ CLASSES *************/
+/**********************************/
+
+.center-container {
+    background-color: $main-bg;
+}
+
+.main-menu {
+    background-color: $menu-bg;
+
+    .logo {
+        border-color: $menu-border;
+    }
+
+    svg {
+        color: $menu-color;
+    }
+}
+
+.main-page {
+    background-color: $main-bg;
+}
+
+.link-hover:hover {
+    background: -webkit-linear-gradient(45deg, $link-hover-1, $link-hover-2);
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-cover {
+    background-color: $profile-bg;
+    background-image: linear-gradient($profile-grad);
+}
+
+.profile-img {
+    background-color: #fff;
+}

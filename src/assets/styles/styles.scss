@@ -1,0 +1,58 @@
+/**********************************/
+/******** EXTERNAL IMPORTS ********/
+/**********************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,100;1,300&family=Roboto:ital,wght@0,100;0,400;0,500;1,100;1,400&display=swap');
+
+/**********************************/
+/*********** VARIABLES ************/
+/**********************************/
+
+$main-menu-width: 40px;
+
+/**********************************/
+/********** BASE STYLES ***********/
+/**********************************/
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+/**********************************/
+/************ CLASSES *************/
+/**********************************/
+
+.center-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.main-menu {
+    width: $main-menu-width;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    -webkit-box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.10);
+}
+
+.main-page {
+    width: calc(100vh - $main-menu-width);
+    height: 100vh;
+    margin: 0px;
+}
+
+/**********************************/
+/************* COLORS *************/
+/**********************************/
+
+@import "./colors.scss";
