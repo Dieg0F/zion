@@ -21,14 +21,14 @@ export function* onSignOut(action: StoreAction) {
 export function* setAuthToken(action: StoreAction) {
   if (!action.payload) return;
 
-  const { authToken } = action.payload.user;
-  if (authToken) {
-    // config.headers.Authorization = authToken;
+  const { user } = action.payload;
+  if (user?.authToken) {
+    // config.headers.Authorization = user?.authToken;
   }
 }
 
 export default all([
-  takeLatest(StorePatterns.AUTH_SIGN_IN, onSignIn),
-  takeLatest(StorePatterns.AUTH_SIGN_OUT, onSignOut),
-  takeLatest(StorePatterns.PERSIST_TOKEN, setAuthToken),
+  takeLatest(StorePatterns.AUTH_SIGN_IN as string, onSignIn),
+  takeLatest(StorePatterns.AUTH_SIGN_OUT as string, onSignOut),
+  takeLatest(StorePatterns.PERSIST_TOKEN as string, setAuthToken),
 ]);

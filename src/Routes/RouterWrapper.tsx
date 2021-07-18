@@ -15,11 +15,21 @@ const RouterWrapper: React.FC<TParams> = ({ component: Component, isPrivate, con
 
   onRouteChange(path as RouteList);
 
-  const MainContext = context
-    ? (context)
-    : (<></>)
-
   const mainLayout = (props: any) => {
+    return context
+      ? contextComp(context, props)
+      : clearComp(props);
+  }
+
+  const clearComp = (props: any) => {
+    return (
+      <Main isAuth={true}>
+        <Component {...props} />
+      </Main>
+    )
+  }
+
+  const contextComp = (MainContext: any, props: any) => {
     return (
       <MainContext>
         <Main isAuth={true}>

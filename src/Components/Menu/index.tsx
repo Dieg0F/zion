@@ -1,13 +1,12 @@
 
 
 import React from 'react';
-import Profile from '../Profile';
 import AddIcon from '@material-ui/icons/Add';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
+import ProfileAvatar from '../Profile/ProfileAvatar';
 import SettingsIcon from '@material-ui/icons/Settings';
 
 import './styles.scss';
-
 
 interface Props {
 }
@@ -20,7 +19,7 @@ const Menu: React.FC<Props> = () => {
                 <AcUnitIcon />
             </div>
             <div className="profiles">
-                <Profile />
+                <ProfileAvatar />
             </div>
             <div className="configs">
                 <div className="config-item">

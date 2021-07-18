@@ -1,14 +1,14 @@
 
 
 import React, { useState, useEffect } from 'react';
-import profileImg from '../../assets/images/default_profile.png';
+import profileImg from '../../../assets/images/default_profile.png';
 
 import './styles.scss';
 
 interface Props {
 }
 
-const Profile: React.FC<Props> = () => {
+const ProfileAvatar: React.FC<Props> = () => {
 
     return (
         <div className="profile profile-cover">
@@ -19,4 +19,4 @@ const Profile: React.FC<Props> = () => {
     )
 };
 
-export default Profile
+export default ProfileAvatar

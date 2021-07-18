@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Menu from '../../Components/Menu';
+import PageSelector from '../../Components/PageSelector';
 
 interface Props {
     isAuth: boolean
@@ -21,7 +22,10 @@ const Main: React.FC<Props> = ({ children, isAuth }) => {
         return (
             <section className="center-container">
                 <Menu />
-                {children}
+                <div className="main-page">
+                    <PageSelector />
+                    {children}
+                </div>
             </section>
         );
     }

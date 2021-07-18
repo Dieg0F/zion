@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 interface Props {
 }
 
-const Feed: React.FC<Props> = () => {
+const Scheduled: React.FC<Props> = () => {
 
     return (
         <>
@@ -14,4 +14,4 @@ const Feed: React.FC<Props> = () => {
     )
 };
 
-export default Feed;
+export default Scheduled;

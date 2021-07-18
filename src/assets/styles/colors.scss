@@ -9,8 +9,14 @@ $menu-border: #BDBDBD;
 $tabs-color: #263238;
 $link-hover-1: #d62976;
 $link-hover-2: #962fbf;
+$main-purple: #962fbf;
+$main-pink: #d62976;
+$main-orange: #fa7e1e;
+$main-yellow: #feda75;
 $profile-bg: #d62976;
-$profile-grad: (220deg, #962fbf 0%, #d62976 25%, #fa7e1e 75%, #feda75 100%);
+$profile-grad: (220deg, $main-purple 0%, $main-pink 25%, $main-orange 75%, $main-yellow 100%);
+$scroll-bar-bg: #BDBDBD;
+$scroll-bar-bg-hover: #BDBDBD;
 /**********************************/
 /************ CLASSES *************/
 /**********************************/
@@ -35,6 +41,33 @@ $profile-grad: (220deg, #962fbf 0%, #d62976 25%, #fa7e1e 75%, #feda75 100%);
     background-color: $main-bg;
 }
 
+.main-page-selector {
+    .page-selector-links {
+        a {
+            color: $tabs-color;
+        }
+
+        a:hover {
+            background: -webkit-linear-gradient(180deg, $main-pink, $main-orange);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+
+.inner-shadow {
+    background: $main-bg;
+    background: linear-gradient(180deg, $main-bg 0%, $main-bg 31%, transparent 100%);
+}
+
+.end-shadow {
+    background: $main-bg;
+    background: linear-gradient(360deg, $main-bg 0%, $main-bg 31%, transparent 100%);
+}
+
+
+
 .link-hover:hover {
     background: -webkit-linear-gradient(45deg, $link-hover-1, $link-hover-2);
     -webkit-text-fill-color: transparent;
@@ -47,4 +80,19 @@ $profile-grad: (220deg, #962fbf 0%, #d62976 25%, #fa7e1e 75%, #feda75 100%);
 
 .profile-img {
     background-color: #fff;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $main-bg;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $scroll-bar-bg;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $scroll-bar-bg-hover;
 }
